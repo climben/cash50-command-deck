@@ -189,12 +189,14 @@ function tiles(){
 function tmPanel(){
   var t=DATA.taskmarket||{};
   document.getElementById('tmcap').innerHTML =
-    '在评 = 我方已投递尚未派奖的单；待收金额 = 存活池按当前名次的预期到手（USDC）。' +
+    '在评 = 我方已投递尚未派奖的单。到达池按提交顺序分池，用我方名次算出确定金额；' +
+    '质量评审池由资方评分决定、名次不决定份额，金额标为未知而不是 0。' +
     '已派奖单数来自投递快照，真实到手金额以「真实净收入」为准。源数据时间：' +
     esc(t.sources_text||'—');
   var ms=[
     ['在评单数', num(t.under_review_count), '已投递 · 未派奖'],
-    ['待收金额（预期）', money4(t.under_review_amount_usdc), '存活池预期到手 · USDC'],
+    ['待收金额（确定）', money4(t.under_review_amount_usdc), '到达池按名次算 · USDC',
+    ['评审池名义奖金', money4(t.under_review_prize_usdc), '结果未知 · 最高档合计'],
     ['存活池数', num(t.live_pool_count), '我方仍有在投条目'],
     ['已派奖单数', num(t.awarded_count), '链上已结算 · 我方得奖']
   ];
@@ -209,7 +211,7 @@ function tmDetail(){
   var rows=list.map(function(x){
     return '<tr><td class="nm">'+esc(x.code)+'<small>名次 '+esc(x.rank)+' · '+esc(x.subs_now)+' 人投</small></td>'+
       '<td class="dim">'+esc(x.exp||'—')+'</td>'+
-      '<td class="nm">'+esc(money4(x.expect))+'</td></tr>'}).join('');
+      '<td class="nm">'+(x.expect==null?'— 评审':esc(money4(x.expect)))+'</td></tr>'}).join('');
   document.getElementById('tmlist').innerHTML='<div class="tblwrap"><table><thead><tr><th>池编号</th><th>截止</th><th>预期到手</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
 }
 
