@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 服务任务指挥台 · 公开看板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Departure+Mono&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#12100E; --maroon:#3A1420; --panel:#221E1A; --line:#453E37;
+  --cream:#EFE9E2; --paper:#FFF6E8; --muted:#B0A79D; --magenta:#E74079; --salmon:#D9A097;
+  --serif:"Instrument Serif",Georgia,"Songti SC",serif;
+  --sans:"Inter Tight","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"Departure Mono",ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ground);
+  background-image:radial-gradient(680px 320px at 88% -8%, rgba(58,20,32,.95), rgba(18,16,14,0) 72%);
+  color:var(--cream); font:14px/1.5 var(--sans);
+  -webkit-font-smoothing:antialiased; min-height:100vh;
+}
+a{color:var(--salmon)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---- header ---- */
+header{padding:26px 0 6px}
+h1{font:400 30px/1.15 var(--serif);color:var(--paper);margin:0 0 6px;letter-spacing:.2px}
+h1 em{font-style:italic;color:var(--magenta)}
+.sub{color:var(--muted);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;
+      padding:2px 10px;font-size:11.5px;color:var(--muted);background:rgba(34,30,26,.7);white-space:nowrap}
+.chip b{color:var(--cream);font-weight:600;font-family:var(--mono);font-size:11.5px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--salmon);display:inline-block}
+.dot.warn{background:var(--magenta)}
+.dot.bad{background:var(--muted)}
+.live{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+/* ---- kpi tiles ---- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+      display:flex;flex-direction:column;justify-content:space-between;min-height:104px}
+.tile .lab{font-size:11.5px;color:var(--muted);letter-spacing:.4px}
+.tile .val{font-size:30px;font-weight:700;color:var(--paper);line-height:1.12;margin-top:6px;
+           font-variant-numeric:tabular-nums;white-space:nowrap}
+.tile .val.money{color:var(--magenta)}
+.tile .val.sm{font-size:25px}
+.tile .note{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.35}
+
+/* ---- panels ---- */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}
+.panel h2{font:400 19px/1.2 var(--serif);color:var(--paper);margin:0 0 2px}
+.panel .cap{color:var(--muted);font-size:11.5px;margin-bottom:12px}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metrics .m{border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:rgba(18,16,14,.45);
+            display:flex;flex-direction:column;justify-content:space-between;min-height:88px}
+.metrics .m .lab{font-size:11px;color:var(--muted)}
+.metrics .m .val{font-size:24px;font-weight:700;color:var(--paper);font-variant-numeric:tabular-nums;
+                 white-space:nowrap;margin-top:5px}
+.metrics .m .note{font-size:10.5px;color:var(--muted);margin-top:4px;line-height:1.35}
+
+details{margin-top:12px}
+details>summary{cursor:pointer;list-style:none;color:var(--muted);font-size:12px;
+  padding:6px 10px;border:1px solid var(--line);border-radius:8px;display:inline-block}
+details>summary::-webkit-details-marker{display:none}
+details>summary:hover{color:var(--cream)}
+details[open]>summary{margin-bottom:10px}
+
+/* ---- table ---- */
+.tblwrap{border:1px solid var(--line);border-radius:12px;overflow:auto;max-height:620px;background:var(--panel)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{position:sticky;top:0;background:#1b1815;color:var(--muted);font-size:11px;font-weight:600;
+   letter-spacing:.5px;cursor:pointer;user-select:none;white-space:nowrap;z-index:2}
+th:hover{color:var(--cream)}
+th .arr{font-family:var(--mono);opacity:.85;margin-left:3px}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:rgba(239,233,226,.03)}
+td.nm{font-weight:600;color:var(--paper);white-space:nowrap}
+td.nm small{display:block;font-weight:400;color:var(--muted);font-size:10.5px;margin-top:2px;
+             font-family:var(--mono);white-space:normal;word-break:break-all}
+td.dim{color:var(--muted);font-size:11.5px;white-space:nowrap}
+.pill{display:inline-block;padding:1px 9px;border-radius:999px;font-size:11px;font-weight:600;
+      border:1px solid var(--line);white-space:nowrap}
+.pRUNNING{color:var(--paper);border-color:rgba(217,160,151,.55);background:rgba(217,160,151,.10)}
+.pSTALLED{color:var(--salmon);border-color:rgba(217,160,151,.55);background:rgba(217,160,151,.14)}
+.pPAUSED{color:var(--muted)}
+.pSTOPPED{color:var(--muted);background:rgba(176,167,157,.08)}
+.pNOHB{color:var(--salmon);border-color:rgba(217,160,151,.4)}
+.badge{display:inline-block;padding:1px 7px;border-radius:6px;font-size:10.5px;font-weight:600;
+       border:1px solid var(--line);color:var(--salmon);white-space:nowrap}
+.logbox{margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--muted);
+        background:rgba(18,16,14,.75);border:1px solid var(--line);border-radius:8px;padding:8px 10px;
+        white-space:pre-wrap;word-break:break-all;max-height:190px;overflow:auto;line-height:1.5}
+.empty{padding:26px;text-align:center;color:var(--muted);font-size:13px}
+.foot{color:var(--muted);font-size:11.5px;padding:18px 0 40px;line-height:1.6}
+.foot b{color:var(--cream);font-weight:600}
+@media(max-width:1000px){.kpis,.metrics{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.kpis,.metrics{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AI 服务任务指挥台 <em>·</em> 公开看板</h1>
+    <div class="sub">
+      <span class="chip"><span class="dot" id="cdot"></span>数据生成时间 <b id="gen">—</b></span>
+      <span class="chip">数据年龄 <b id="age">—</b></span>
+      <span class="chip">发布于 <b id="pub">—</b></span>
+      <span class="live" id="live">载入中…</span>
+    </div>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="panel">
+    <h2>Taskmarket 在评 / 待收</h2>
+    <div class="cap" id="tmcap">—</div>
+    <div class="metrics" id="tm"></div>
+    <details id="tmdetail"><summary>展开在评明细</summary><div id="tmlist"></div></details>
+  </section>
+
+  <section class="panel">
+    <h2>服务清单</h2>
+    <div class="cap" id="svccap">—</div>
+    <div class="tblwrap">
+      <table id="svc">
+        <thead><tr>
+          <th data-k="name">服务</th>
+          <th data-k="group">分组</th>
+          <th data-k="status">状态</th>
+          <th data-k="hb">心跳新鲜度</th>
+          <th data-k="money">赚钱相关</th>
+          <th data-k="purpose">用途</th>
+          <th data-k="log">日志尾</th>
+        </tr></thead>
+        <tbody id="svb"></tbody>
+      </table>
+    </div>
+    <div id="svcempty"></div>
+  </section>
+
+  <div class="foot">
+    真相来源：<b>desk_state.json</b>（Windows 进程表实证 + 心跳佐证）与 <b>income_truth.json</b>（链上成交台账）。
+    页面每 30 秒自刷新；快照时间以页头「数据生成时间」为准，数字缺失显示「—」，不补 0。
+  </div>
+</div>
+<script>
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function num(v){return (v===null||v===undefined||v==='')?'—':Number(v)}
+function money(v){var n=num(v);return n==='—'?'—':'$'+n.toFixed(2)}
+function money4(v){var n=num(v);return n==='—'?'—':'$'+n.toFixed(4)}
+function age(sec){var n=num(sec);if(n==='—')return '—';n=Number(n);
+  if(n<60)return Math.round(n)+' 秒前';if(n<3600)return Math.round(n/60)+' 分钟前';
+  if(n<86400)return (n/3600).toFixed(1)+' 小时前';return (n/86400).toFixed(1)+' 天前'}
+function hbText(s){var a=num(s.hb_age_s);if(a==='—')return '—';
+  return age(s.hb_age_s)+(s.hb_stale?' · 过期':'')}
+function hbBucket(s){if(s.hb_age_s===null||s.hb_age_s===undefined)return 'none';
+  if(s.hb_stale)return 'stale';return 'ok'}
+
+var DATA=null, SORT={k:'status',dir:-1}, ROWS=[], LAST=null;
+
+function tiles(){
+  var s=(DATA.summary||{}), m=(DATA.money||{});
+  var t=[
+    ['服务总数', num(s.total), '注册在册'],
+    ['运行中', num(s.running), '进程表实证'],
+    ['已暂停', num(s.paused), '人为关闭'],
+    ['异常停滞', num(s.stalled), '心跳过期'],
+    ['赚钱相关服务', num(s.money_services), '链上有实收证据'],
+    ['实收毛额', money(m.gross_usdc), '第三方链上实收'],
+    ['真实净收入', money(m.net_usdc), '已扣支出与手续费', 'money'],
+    ['距 $100 缺口', money(m.gap_to_100_usdc), '目标 $100 · 已扣全部支出']
+  ];
+  document.getElementById('kpis').innerHTML=t.map(function(x){
+    var cls=x[3]==='money'?' val money':' val';
+    return '<div class="tile"><div class="lab">'+esc(x[0])+'</div><div class="'+cls+'">'+esc(x[1])+
+      '</div><div class="note">'+esc(x[2])+'</div></div>'}).join('');
+}
+
+function tmPanel(){
+  var t=DATA.taskmarket||{};
+  document.getElementById('tmcap').innerHTML =
+    '在评 = 我方已投递尚未派奖的单；待收金额 = 存活池按当前名次的预期到手（USDC）。源数据时间：' +
+    esc(t.sources_text||'—');
+  var ms=[
+    ['在评单数', num(t.under_review_count), '已投递 · 未派奖'],
+    ['待收金额（预期）', money4(t.under_review_amount_usdc), '存活池预期到手 · USDC'],
+    ['存活池数', num(t.live_pool_count), '我方仍有在投条目'],
+    ['已派奖单数', num(t.awarded_count), '链上已结算 · 我方得奖']
+  ];
+  document.getElementById('tm').innerHTML=ms.map(function(x){
+    return '<div class="m"><div class="lab">'+esc(x[0])+'</div><div class="val">'+esc(x[1])+
+      '</div><div class="note">'+esc(x[2])+'</div></div>'}).join('');
+}
+
+function tmDetail(){
+  var list=(DATA.taskmarket&&DATA.taskmarket.entries)||[];
+  if(!list.length){document.getElementById('tmlist').innerHTML='<div class="empty">没有可展开的在评明细</div>';return}
+  var rows=list.map(function(x){
+    return '<tr><td class="nm">'+esc(x.code)+'<small>名次 '+esc(x.rank)+' · '+esc(x.subs_now)+' 人投</small></td>'+
+      '<td class="dim">'+esc(x.exp||'—')+'</td>'+
+      '<td class="nm">'+esc(money4(x.expect))+'</td></tr>'}).join('');
+  document.getElementById('tmlist').innerHTML='<div class="tblwrap"><table><thead><tr><th>池编号</th><th>截止</th><th>预期到手</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+}
+
+function sortRows(){
+  var k=SORT.k, dir=SORT.dir;
+  ROWS.sort(function(a,b){
+    var x,y;
+    if(k==='hb'){x=(a.hb_age_s===null||a.hb_age_s===undefined)?1e12:a.hb_age_s;y=(b.hb_age_s===null||b.hb_age_s===undefined)?1e12:b.hb_age_s;}
+    else if(k==='money'){x=a.money?1:0;y=b.money?1:0;}
+    else if(k==='log'){x=(a.log_tail||[]).length;y=(b.log_tail||[]).length;}
+    else{x=String(a[k]==null?'':a[k]);y=String(b[k]==null?'':b[k]);
+      if(x<y)return -1*dir;if(x>y)return 1*dir;return 0}
+    if(x<y)return -1*dir;if(x>y)return 1*dir;return 0;
+  });
+}
+
+function svcTable(){
+  sortRows();
+  var body=document.getElementById('svb');
+  body.innerHTML=ROWS.map(function(s,i){
+    var st=String(s.status||'');
+    var cls=/RUNNING/.test(st)?'pRUNNING':/STALLED/.test(st)?'pSTALLED':/PAUSED/.test(st)?'pPAUSED':'pSTOPPED';
+    var bk=hbBucket(s);
+    var bktxt=bk==='stale'?'过期':bk==='none'?'无心跳':'新鲜';
+    var bkcls=bk==='stale'?'pSTALLED':bk==='none'?'pNOHB':'pRUNNING';
+    return '<tr><td class="nm">'+esc(s.name)+'<small>'+esc(s.script||'')+'</small></td>'+
+      '<td class="dim">'+esc(s.group||'—')+'</td>'+
+      '<td><span class="pill '+cls+'">'+esc(st||'—')+'</span></td>'+
+      '<td class="dim"><span class="pill '+bkcls+'">'+esc(bktxt)+'</span> '+esc(hbText(s))+'</td>'+
+      '<td>'+(s.money?'<span class="badge">收钱</span>':'<span class="dim">—</span>')+'</td>'+
+      '<td class="dim">'+esc(s.purpose||'—')+'</td>'+
+      '<td class="dim"><details class="logd"><summary>展开</summary><div class="logbox" data-i="'+i+'"></div></details></td></tr>';
+  }).join('');
+  var d=body.querySelectorAll('details.logd');
+  for(var i=0;i<d.length;i++){
+    d[i].addEventListener('toggle',function(){
+      if(!this.open)return;
+      var box=this.querySelector('.logbox');
+      if(box.dataset.filled)return;
+      var s=ROWS[+box.dataset.i];
+      var lines=(s&&s.log_tail)||[];
+      box.textContent=lines.length?lines.join('\n'):'（无日志）';
+      box.dataset.filled='1';
+    });
+  }
+  var head=document.querySelectorAll('#svc th');
+  for(var j=0;j<head.length;j++){
+    var k=head[j].getAttribute('data-k');
+    head[j].innerHTML=head[j].textContent.replace(/[↑↓]/g,'').trim()+
+      (SORT.k===k?' <span class="arr">'+(SORT.dir===1?'↑':'↓')+'</span>':'');
+    head[j].onclick=function(){
+      var k=this.getAttribute('data-k');
+      if(SORT.k===k){SORT.dir=-SORT.dir}else{SORT.k=k;SORT.dir=(k==='status'||k==='hb')?-1:1}
+      svcTable();
+    };
+  }
+  document.getElementById('svcempty').innerHTML=ROWS.length?'':'<div class="empty">没有注册的服务</div>';
+}
+
+function render(){
+  if(!DATA){return}
+  document.getElementById('gen').textContent=DATA.generated_at||'—';
+  document.getElementById('pub').textContent=DATA.published_at||'—';
+  var ageEl=document.getElementById('age'), dot=document.getElementById('cdot');
+  if(DATA.generated_at){
+    var t=Date.parse(DATA.generated_at);
+    if(!isNaN(t)){
+      var sec=Math.max(0,Math.round((Date.now()-t)/1000));
+      ageEl.textContent=age(sec);
+      dot.className='dot'+(sec>900?' bad':(sec>300?' warn':''));
+    }
+  }else{ageEl.textContent='—'}
+  tiles();tmPanel();tmDetail();
+  ROWS=(DATA.services||[]).slice();
+  document.getElementById('svccap').textContent='共 '+(ROWS.length)+' 个在册服务 · 点表头排序 · 日志尾默认折叠';
+  svcTable();
+}
+
+function load(){
+  fetch('status.json?t='+Date.now(),{cache:'no-store'})
+   .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+   .then(function(d){DATA=d;render();LAST=new Date();
+     document.getElementById('live').textContent='已刷新 · '+LAST.toLocaleTimeString('zh-CN',{hour12:false});})
+   .catch(function(e){document.getElementById('live').textContent='读取失败：'+e});
+}
+load();
+setInterval(load,30000);
+</script>
+</body>
+</html>
