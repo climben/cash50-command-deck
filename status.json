@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-26T22:17:23Z",
- "published_at": "2026-11-26T22:17:28Z",
+ "generated_at": "2026-11-26T22:25:20Z",
+ "published_at": "2026-11-26T22:25:28Z",
  "summary": {
   "total": 37,
   "running": 18,
@@ -29,12 +29,12 @@
   "awarded_to_us_count": 4,
   "submitted_count": 95,
   "sources": {
-   "desk_state": "2026-11-26T22:17:23Z",
+   "desk_state": "2026-11-26T22:25:20Z",
    "income_truth": "2026-11-26T22:13:48Z",
-   "tm_pending": "2026-11-26T21:48:38Z",
-   "tm_status": "2026-11-26T21:48:32Z"
+   "tm_pending": "2026-11-26T22:23:49Z",
+   "tm_status": "2026-11-26T22:23:44Z"
   },
-  "sources_text": "投递单 2026-11-26T21:48:32Z · 存活池 2026-11-26T21:48:38Z",
+  "sources_text": "投递单 2026-11-26T22:23:44Z · 存活池 2026-11-26T22:23:49Z",
   "entries": [
    {
     "code": "TSK-BKSJFRYN",
@@ -67,7 +67,7 @@
     "code": "TSK-9JXR7686",
     "expect": null,
     "rank": 15,
-    "subs_now": 52,
+    "subs_now": 53,
     "exp": "2026-11-29T23:20:36.451Z",
     "cat": "quality_review",
     "prize": 0.42
@@ -76,7 +76,7 @@
     "code": "TSK-V7JK5BWQ",
     "expect": null,
     "rank": 17,
-    "subs_now": 53,
+    "subs_now": 54,
     "exp": "2026-11-29T23:21:11.382Z",
     "cat": "quality_review",
     "prize": 0.42
@@ -85,7 +85,7 @@
     "code": "TSK-RV3DM76D",
     "expect": null,
     "rank": 19,
-    "subs_now": 51,
+    "subs_now": 52,
     "exp": "2026-11-29T23:21:52.499Z",
     "cat": "quality_review",
     "prize": 0.42
@@ -103,7 +103,7 @@
     "code": "TSK-CSPSY0GV",
     "expect": null,
     "rank": 23,
-    "subs_now": 54,
+    "subs_now": 55,
     "exp": "2026-11-30T01:06:28.606Z",
     "cat": "quality_review",
     "prize": 0.42
@@ -112,7 +112,7 @@
     "code": "TSK-289QQQGZ",
     "expect": null,
     "rank": 28,
-    "subs_now": 53,
+    "subs_now": 54,
     "exp": "2026-11-30T01:09:56.404Z",
     "cat": "quality_review",
     "prize": 0.42
@@ -157,7 +157,7 @@
    "purpose": "The Colony 已核实放弃（结算限制）",
    "script": "D:/mcode/cash50/tools/colony/colony_watch.py",
    "pids": [],
-   "hb_age_s": 119172.0,
+   "hb_age_s": 119649.0,
    "hb_at": "2026-11-25T13:11:11Z",
    "hb_stale": true,
    "log_tail": [
@@ -177,7 +177,7 @@
    "purpose": "ACP 反复报 ERR_MODULE_NOT_FOUND，无产出",
    "script": "D:/mcode/cash50/tools/acp/acp_daemon.py",
    "pids": [],
-   "hb_age_s": 119143.2,
+   "hb_age_s": 119620.1,
    "hb_at": "2026-11-25T13:11:40Z",
    "hb_stale": true,
    "log_tail": [
@@ -197,7 +197,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/market/bothire_watch.py",
    "pids": [],
-   "hb_age_s": 119129.2,
+   "hb_age_s": 119606.1,
    "hb_at": "2026-11-25T13:11:54Z",
    "hb_stale": true,
    "log_tail": []
@@ -212,8 +212,8 @@
    "purpose": "旧版敲门(打的是卖家listing)，已被 demand_knock 取代，保持停用",
    "script": "D:/mcode/cash50/tools/scout/hashn_knock_fire.py",
    "pids": [],
-   "hb_age_s": 107.2,
-   "hb_at": "2026-11-26T22:15:36Z",
+   "hb_age_s": 76.8,
+   "hb_at": "2026-11-26T22:24:03Z",
    "hb_stale": false,
    "log_tail": [
     "2026-11-25T13:08:08+00:00 runner started, not before 2026-11-20T01:45:00Z",
@@ -232,7 +232,7 @@
    "purpose": "仅服务于已放弃的 sell 站",
    "script": "D:/mcode/cash50/tools/sell/serveo_subdomain_watch.py",
    "pids": [],
-   "hb_age_s": 119116.5,
+   "hb_age_s": 119593.5,
    "hb_at": "2026-11-25T13:12:06Z",
    "hb_stale": true,
    "log_tail": []
@@ -249,7 +249,7 @@
    "pids": [
     19832
    ],
-   "hb_age_s": 11.6,
+   "hb_age_s": 488.6,
    "hb_at": "2026-11-26T22:17:11Z",
    "hb_stale": false,
    "log_tail": [
@@ -269,7 +269,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/deskcrew_watch.py",
    "pids": [],
-   "hb_age_s": 119169.3,
+   "hb_age_s": 119646.3,
    "hb_at": "2026-11-25T13:11:13Z",
    "hb_stale": true,
    "log_tail": [
@@ -289,7 +289,7 @@
    "purpose": "托管续费改走自有静态站",
    "script": "D:/mcode/cash50/tools/sell/x402hosting_renew_watch.py",
    "pids": [],
-   "hb_age_s": 119329.5,
+   "hb_age_s": 119806.4,
    "hb_at": "2026-11-25T13:08:33Z",
    "hb_stale": true,
    "log_tail": []
@@ -306,8 +306,8 @@
    "pids": [
     112076
    ],
-   "hb_age_s": 25.9,
-   "hb_at": "2026-11-26T22:16:57Z",
+   "hb_age_s": 114.7,
+   "hb_at": "2026-11-26T22:25:25Z",
    "hb_stale": false,
    "log_tail": [
     "  OPPORTUNITY TSK-SAY3W1BA   m104-1-tap-state-replication-quorum-router 0.01   subs=3    ready=False check=.plan/checks/m104-1-tap-state-replication-quorum-router.test.mjs",
@@ -328,8 +328,8 @@
    "pids": [
     38620
    ],
-   "hb_age_s": 39.5,
-   "hb_at": "2026-11-26T22:16:43Z",
+   "hb_age_s": 36.5,
+   "hb_at": "2026-11-26T22:24:43Z",
    "hb_stale": false,
    "log_tail": [
     "{\"t\": \"2026-11-25T13:08:06Z\", \"msg\": \"watcher up\", \"pid\": 16044}",
@@ -350,14 +350,14 @@
    "pids": [
     13244
    ],
-   "hb_age_s": 46.6,
-   "hb_at": "2026-11-26T22:16:36Z",
+   "hb_age_s": 12.7,
+   "hb_at": "2026-11-26T22:25:22Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"t\": \"2026-11-26T22:14:51Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-26T22:16:06Z\", \"msg\": \"entry not issued yet\", \"item\": \"part-schema\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-26T22:16:22Z\", \"msg\": \"entry not issued yet\", \"item\": \"contributing-safety\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-26T22:16:36Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}"
+    "{\"t\": \"2026-11-26T22:23:20Z\", \"msg\": \"entry not issued yet\", \"item\": \"contributing-safety\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-26T22:23:34Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-26T22:24:51Z\", \"msg\": \"entry not issued yet\", \"item\": \"part-schema\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-26T22:25:07Z\", \"msg\": \"entry not issued yet\", \"item\": \"contributing-safety\", \"code\": \"push_required\"}"
    ]
   },
   {
@@ -370,7 +370,7 @@
    "purpose": "已被 desk.py 指挥台取代",
    "script": "D:/mcode/cash50/tools/auto/service_monitor.py",
    "pids": [],
-   "hb_age_s": 119131.4,
+   "hb_age_s": 119608.4,
    "hb_at": "2026-11-25T13:11:51Z",
    "hb_stale": true,
    "log_tail": [
@@ -392,8 +392,8 @@
    "pids": [
     65228
    ],
-   "hb_age_s": 23.0,
-   "hb_at": "2026-11-26T22:17:24Z",
+   "hb_age_s": 9.5,
+   "hb_at": "2026-11-26T22:25:24Z",
    "hb_stale": false,
    "log_tail": [
     "NOTICE_RENEWED",
@@ -414,14 +414,14 @@
    "pids": [
     88528
    ],
-   "hb_age_s": 6.8,
-   "hb_at": "2026-11-26T22:17:16Z",
+   "hb_age_s": 118.1,
+   "hb_at": "2026-11-26T22:23:22Z",
    "hb_stale": false,
    "log_tail": [
-    "22:08:07 project2 tasks=9",
-    "22:11:11 project2 tasks=9",
     "22:14:14 project2 tasks=9",
-    "22:17:17 project2 tasks=9"
+    "22:17:17 project2 tasks=9",
+    "22:20:20 project2 tasks=9",
+    "22:23:23 project2 tasks=9"
    ]
   },
   {
@@ -436,8 +436,8 @@
    "pids": [
     93728
    ],
-   "hb_age_s": 36.3,
-   "hb_at": "2026-11-26T22:16:46Z",
+   "hb_age_s": 9.6,
+   "hb_at": "2026-11-26T22:25:10Z",
    "hb_stale": false,
    "log_tail": [
     "02:06:40 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error Remote end closed connection without response>",
@@ -458,8 +458,8 @@
    "pids": [
     112576
    ],
-   "hb_age_s": 1.1,
-   "hb_at": "2026-11-26T22:17:22Z",
+   "hb_age_s": 4.0,
+   "hb_at": "2026-11-26T22:25:22Z",
    "hb_stale": false,
    "log_tail": [
     "09:50:46 fetch 8453 failed: HTTP Error 502: Bad Gateway",
@@ -478,7 +478,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/auto/synmerco_watch.py",
    "pids": [],
-   "hb_age_s": 119174.6,
+   "hb_age_s": 119651.6,
    "hb_at": "2026-11-25T13:11:08Z",
    "hb_stale": true,
    "log_tail": [
@@ -500,7 +500,7 @@
    "pids": [
     115952
    ],
-   "hb_age_s": 336.7,
+   "hb_age_s": 813.6,
    "hb_at": "2026-11-26T22:11:46Z",
    "hb_stale": false,
    "log_tail": [
@@ -520,7 +520,7 @@
    "purpose": "moltjobs 需注册邮箱 claim，无产出",
    "script": "D:/mcode/cash50/tools/auto/moltjobs_autobid.py",
    "pids": [],
-   "hb_age_s": 119351.1,
+   "hb_age_s": 119828.1,
    "hb_at": "2026-11-25T13:08:12Z",
    "hb_stale": true,
    "log_tail": []
@@ -537,8 +537,8 @@
    "pids": [
     32276
    ],
-   "hb_age_s": 1.7,
-   "hb_at": "2026-11-26T22:17:27Z",
+   "hb_age_s": 2.5,
+   "hb_at": "2026-11-26T22:25:23Z",
    "hb_stale": false,
    "log_tail": [
     "2026-11-26T22:00:17Z skip TSK-M9KN2CDG: deliverable kind not recognised",
@@ -557,7 +557,7 @@
    "purpose": "ClawWork 需账号，无产出",
    "script": "D:/mcode/cash50/tools/auto/cw_contract_watch.py",
    "pids": [],
-   "hb_age_s": 119218.5,
+   "hb_age_s": 119695.5,
    "hb_at": "2026-11-25T13:10:24Z",
    "hb_stale": true,
    "log_tail": [
@@ -577,7 +577,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/auto/elgora_watch.py",
    "pids": [],
-   "hb_age_s": 119171.6,
+   "hb_age_s": 119648.6,
    "hb_at": "2026-11-25T13:11:11Z",
    "hb_stale": true,
    "log_tail": [
@@ -596,7 +596,7 @@
    "purpose": "dealwork 无产出",
    "script": "D:/mcode/cash50/tools/auto/dw_radar.py",
    "pids": [],
-   "hb_age_s": 119167.0,
+   "hb_age_s": 119644.0,
    "hb_at": "2026-11-25T13:11:16Z",
    "hb_stale": true,
    "log_tail": [
@@ -616,7 +616,7 @@
    "purpose": "ClawWork 需账号，无产出",
    "script": "D:/mcode/cash50/tools/auto/cw_radar.py",
    "pids": [],
-   "hb_age_s": 119139.1,
+   "hb_age_s": 119616.0,
    "hb_at": "2026-11-25T13:11:44Z",
    "hb_stale": true,
    "log_tail": [
@@ -636,7 +636,7 @@
    "purpose": "dealwork 无产出",
    "script": "D:/mcode/cash50/tools/auto/dw_watch.py",
    "pids": [],
-   "hb_age_s": 119165.5,
+   "hb_age_s": 119642.5,
    "hb_at": "2026-11-25T13:11:17Z",
    "hb_stale": true,
    "log_tail": [
@@ -656,7 +656,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/confirm_sweep.py",
    "pids": [],
-   "hb_age_s": 119175.9,
+   "hb_age_s": 119652.9,
    "hb_at": "2026-11-25T13:11:07Z",
    "hb_stale": true,
    "log_tail": [
@@ -678,14 +678,14 @@
    "pids": [
     61584
    ],
-   "hb_age_s": 68.7,
-   "hb_at": "2026-11-26T22:16:14Z",
+   "hb_age_s": 387.7,
+   "hb_at": "2026-11-26T22:18:52Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"t\": \"2026-11-26T21:15:01Z\", \"msg\": \"sync error\", \"seconds\": 600.0, \"stdout\": \"\", \"stderr\": \"Command '['C:\\\\\\\\Users\\\\\\\\climb\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Programs\\\\\\\\Python\\\\\\\\Python314\\\\\\\\pythonw.exe', 'D:\\\\\\\\mcode\\\\\\\\cash50\\\\\\\\tools\\\\\\\\auto\\\\\\\\ledger_sync_submissions.py']' timed out after 600 seconds\"}",
     "{\"t\": \"2026-11-26T21:31:10Z\", \"msg\": \"sync ok\", \"seconds\": 369.0, \"stdout\": \"{\\\"touched\\\": 190, \\\"platform_rows\\\": 263, \\\"tracked\\\": 190, \\\"pending_usd\\\": 76.08, \\\"pending_receivable_usd\\\": 2.1226, \\\"pending_uncollectible_usd\\\": 73.9574, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
     "{\"t\": \"2026-11-26T21:46:37Z\", \"msg\": \"sync ok\", \"seconds\": 327.0, \"stdout\": \"{\\\"touched\\\": 190, \\\"platform_rows\\\": 263, \\\"tracked\\\": 190, \\\"pending_usd\\\": 76.08, \\\"pending_receivable_usd\\\": 2.1226, \\\"pending_uncollectible_usd\\\": 73.9574, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
-    "{\"t\": \"2026-11-26T22:06:14Z\", \"msg\": \"sync ok\", \"seconds\": 577.7, \"stdout\": \"{\\\"touched\\\": 190, \\\"platform_rows\\\": 263, \\\"tracked\\\": 190, \\\"pending_usd\\\": 76.08, \\\"pending_receivable_usd\\\": 2.1226, \\\"pending_uncollectible_usd\\\": 73.9574, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}"
+    "{\"t\": \"2026-11-26T22:06:14Z\", \"msg\": \"sync ok\", \"seconds\": 577.7, \"stdout\": \"{\\\"touched\\\": 190, \\\"platform_rows\\\": 263, \\\"tracked\\\": 190, \\\"pending_usd\\\": 76.08, \\\"pending_receivable_usd\\\": 2.1226, \\\"pending_uncollectible_usd\\\": 73.9574, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
+    "{\"t\": \"2026-11-26T22:18:52Z\", \"msg\": \"sync ok\", \"seconds\": 158.0, \"stdout\": \"{\\\"touched\\\": 190, \\\"platform_rows\\\": 263, \\\"tracked\\\": 190, \\\"pending_usd\\\": 76.08, \\\"pending_receivable_usd\\\": 2.1226, \\\"pending_uncollectible_usd\\\": 73.9574, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}"
    ]
   },
   {
@@ -698,7 +698,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/tm_project2_backing.py",
    "pids": [],
-   "hb_age_s": 119280.0,
+   "hb_age_s": 119757.0,
    "hb_at": "2026-11-25T13:09:23Z",
    "hb_stale": true,
    "log_tail": []
@@ -713,7 +713,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/tm_project_claim.py",
    "pids": [],
-   "hb_age_s": 124730.7,
+   "hb_age_s": 125207.7,
    "hb_at": "2026-11-25T11:38:32Z",
    "hb_stale": true,
    "log_tail": [
@@ -734,7 +734,7 @@
    "pids": [
     37508
    ],
-   "hb_age_s": 214.7,
+   "hb_age_s": 691.7,
    "hb_at": "2026-11-26T22:13:48Z",
    "hb_stale": false,
    "log_tail": []
@@ -751,7 +751,7 @@
    "pids": [
     109560
    ],
-   "hb_age_s": 1200.3,
+   "hb_age_s": 1677.2,
    "hb_at": "2026-11-26T21:57:23Z",
    "hb_stale": false,
    "log_tail": []
@@ -768,14 +768,14 @@
    "pids": [
     18936
    ],
-   "hb_age_s": 4.7,
-   "hb_at": "2026-11-26T22:17:25Z",
+   "hb_age_s": 2.6,
+   "hb_at": "2026-11-26T22:25:24Z",
    "hb_stale": false,
    "log_tail": [
-    "17:13:55 cache write failed: PermissionError(13, '拒绝访问。')",
     "19:10:00 cache write failed: PermissionError(13, '拒绝访问。')",
     "19:10:52 cache write failed: PermissionError(13, '拒绝访问。')",
-    "20:32:37 cache write failed: PermissionError(13, '拒绝访问。')"
+    "20:32:37 cache write failed: PermissionError(13, '拒绝访问。')",
+    "22:21:48 cache write failed: PermissionError(13, '拒绝访问。')"
    ]
   },
   {
@@ -790,14 +790,14 @@
    "pids": [
     95828
    ],
-   "hb_age_s": 10.9,
-   "hb_at": "2026-11-26T22:17:12Z",
+   "hb_age_s": 9.4,
+   "hb_at": "2026-11-26T22:25:10Z",
    "hb_stale": false,
    "log_tail": [
-    "06:13:45 conn error [Errno 11001] getaddrinfo failed",
-    "06:14:52 conn error [Errno 11001] getaddrinfo failed",
-    "06:16:00 conn error [Errno 11001] getaddrinfo failed",
-    "06:17:11 conn error [Errno 11001] getaddrinfo failed"
+    "06:20:43 conn error [Errno 11001] getaddrinfo failed",
+    "06:21:51 conn error [Errno 11001] getaddrinfo failed",
+    "06:23:02 conn error [Errno 11001] getaddrinfo failed",
+    "06:24:10 conn error [Errno 11001] getaddrinfo failed"
    ]
   },
   {
@@ -812,14 +812,14 @@
    "pids": [
     81724
    ],
-   "hb_age_s": 227.8,
-   "hb_at": "2026-11-26T22:13:35Z",
+   "hb_age_s": 224.1,
+   "hb_at": "2026-11-26T22:21:36Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"ts\": \"2026-11-26T22:01:39Z\", \"event\": \"pushed\", \"detail\": \"changed: status.json\", \"commit\": \"544f5e34cf19675ec82581cc1d558690e6da4ef4\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"building\", \"data_generated_at\": \"2026-11-26T22:01:28Z\"}",
-    "{\"ts\": \"2026-11-26T22:05:35Z\", \"event\": \"unchanged\", \"detail\": \"实质内容一致，未提交（距上次发布 247s）\", \"commit\": \"544f5e34cf19675ec82581cc1d558690e6da4ef4\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"built\", \"data_generated_at\": \"2026-11-26T22:05:23Z\"}",
     "{\"ts\": \"2026-11-26T22:09:35Z\", \"event\": \"unchanged\", \"detail\": \"实质内容一致，未提交（距上次发布 487s）\", \"commit\": \"544f5e34cf19675ec82581cc1d558690e6da4ef4\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"built\", \"data_generated_at\": \"2026-11-26T22:09:26Z\"}",
-    "{\"ts\": \"2026-11-26T22:13:35Z\", \"event\": \"unchanged\", \"detail\": \"实质内容一致，未提交（距上次发布 726s）\", \"commit\": \"544f5e34cf19675ec82581cc1d558690e6da4ef4\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"built\", \"data_generated_at\": \"2026-11-26T22:13:20Z\"}"
+    "{\"ts\": \"2026-11-26T22:13:35Z\", \"event\": \"unchanged\", \"detail\": \"实质内容一致，未提交（距上次发布 726s）\", \"commit\": \"544f5e34cf19675ec82581cc1d558690e6da4ef4\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"built\", \"data_generated_at\": \"2026-11-26T22:13:20Z\"}",
+    "{\"ts\": \"2026-11-26T22:17:38Z\", \"event\": \"pushed\", \"detail\": \"changed: status.json\", \"commit\": \"c81a935fca3f8db8a4c57616511e91a14d7ee3f7\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"building\", \"data_generated_at\": \"2026-11-26T22:17:23Z\"}",
+    "{\"ts\": \"2026-11-26T22:21:36Z\", \"event\": \"unchanged\", \"detail\": \"实质内容一致，未提交（距上次发布 247s）\", \"commit\": \"c81a935fca3f8db8a4c57616511e91a14d7ee3f7\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"built\", \"data_generated_at\": \"2026-11-26T22:21:25Z\"}"
    ]
   },
   {
@@ -834,14 +834,14 @@
    "pids": [
     110412
    ],
-   "hb_age_s": 1724.9,
-   "hb_at": "2026-11-26T21:48:38Z",
+   "hb_age_s": 90.9,
+   "hb_at": "2026-11-26T22:23:49Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"t\": \"2026-11-26T21:43:53Z\", \"msg\": \"step\", \"step\": \"sync_our_entries\", \"rc\": 0, \"sec\": 612.1}",
-    "{\"t\": \"2026-11-26T21:48:32Z\", \"msg\": \"step\", \"step\": \"our_status\", \"rc\": 0, \"sec\": 278.3}",
-    "{\"t\": \"2026-11-26T21:48:38Z\", \"msg\": \"step\", \"step\": \"money_index\", \"rc\": 0, \"sec\": 6.2}",
-    "{\"t\": \"2026-11-26T21:48:38Z\", \"msg\": \"step\", \"step\": \"money_table\", \"rc\": 0, \"sec\": 0.1}"
+    "{\"t\": \"2026-11-26T22:19:19Z\", \"msg\": \"step\", \"step\": \"sync_our_entries\", \"rc\": 0, \"sec\": 41.5}",
+    "{\"t\": \"2026-11-26T22:23:44Z\", \"msg\": \"step\", \"step\": \"our_status\", \"rc\": 0, \"sec\": 264.3}",
+    "{\"t\": \"2026-11-26T22:23:49Z\", \"msg\": \"step\", \"step\": \"money_index\", \"rc\": 0, \"sec\": 5.2}",
+    "{\"t\": \"2026-11-26T22:23:49Z\", \"msg\": \"step\", \"step\": \"money_table\", \"rc\": 0, \"sec\": 0.1}"
    ]
   },
   {
@@ -856,14 +856,14 @@
    "pids": [
     78320
    ],
-   "hb_age_s": 107.2,
-   "hb_at": "2026-11-26T22:15:36Z",
+   "hb_age_s": 76.9,
+   "hb_at": "2026-11-26T22:24:03Z",
    "hb_stale": false,
    "log_tail": [
-    "2026-11-26T22:09:12+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
-    "2026-11-26T22:11:19+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
-    "2026-11-26T22:13:26+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
-    "2026-11-26T22:15:34+00:00 buyer-side deal - our party is the payer, not ours to fulfil"
+    "2026-11-26T22:17:40+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
+    "2026-11-26T22:19:47+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
+    "2026-11-26T22:21:54+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
+    "2026-11-26T22:24:01+00:00 buyer-side deal - our party is the payer, not ours to fulfil"
    ]
   },
   {
@@ -876,9 +876,9 @@
    "purpose": "TermiX 挂机守护：托管在线+自动报价等买家下单（brief 下单到资金到位仅 31 秒）",
    "script": "D:/mcode/cash50/tools/scout/termix_watch_guard.py",
    "pids": [],
-   "hb_age_s": 524.7,
+   "hb_age_s": 1001.7,
    "hb_at": "2026-11-26T22:08:38Z",
-   "hb_stale": false,
+   "hb_stale": true,
    "log_tail": [
     "2026-11-26T22:03:36Z started quoter pid 38504",
     "WAIT #1 2026-11-26T22:06:58Z STATE_OK",
