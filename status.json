@@ -1,0 +1,745 @@
+{
+ "generated_at": "2026-11-26T03:14:12Z",
+ "published_at": "2026-11-26T03:14:15Z",
+ "summary": {
+  "total": 33,
+  "running": 15,
+  "paused": 18,
+  "stalled": 0,
+  "money_services": 9
+ },
+ "money": {
+  "gross_usdc": 6.0354,
+  "net_usdc": 2.755818,
+  "outflow_usdc": 3.279582,
+  "goal_usdc": 100.0,
+  "gap_to_100_usdc": 97.244182,
+  "generated_at": "2026-11-26T03:03:49Z",
+  "source": "tx_ledger_publish.json",
+  "method": "链上真值来自已核链的成交台账 data/work/tx_ledger/tx_ledger_publish.json（每条腿带 time_utc / chain_verified / amount_matches_chain，并用余额对账自证完整）；分类规则同本脚本 CLASSIFY 口径：内部划转/自有资金跨链/用户注资转换/跨链损耗一律不计收入，Taskmarket 提交费计支出。台账缺失时退回本脚本自扫链。"
+ },
+ "taskmarket": {
+  "under_review_count": 82,
+  "under_review_amount_usdc": 9.898,
+  "live_pool_count": 34,
+  "awarded_count": 11,
+  "awarded_to_us_usdc": 0.8016,
+  "awarded_to_us_count": 4,
+  "submitted_count": 93,
+  "sources": {
+   "desk_state": "2026-11-26T03:14:12Z",
+   "income_truth": "2026-11-26T03:03:49Z",
+   "tm_pending": "2026-11-24T09:18:56Z",
+   "tm_status": "2026-11-24T09:17:30Z"
+  },
+  "sources_text": "投递单 2026-11-24T09:17:30Z · 存活池 2026-11-24T09:18:56Z",
+  "entries": [
+   {
+    "code": "TSK-A8S56V04",
+    "expect": 3.0,
+    "rank": null,
+    "subs_now": 37,
+    "exp": "2026-11-24T12:13:48.723Z"
+   },
+   {
+    "code": "TSK-7MXGHN91",
+    "expect": 3.0,
+    "rank": null,
+    "subs_now": 17,
+    "exp": "2026-11-24T15:14:07.186Z"
+   },
+   {
+    "code": "TSK-Z650DAKT",
+    "expect": 2.0,
+    "rank": 56,
+    "subs_now": 74,
+    "exp": "2026-11-29T10:16:39.222Z"
+   },
+   {
+    "code": "TSK-9WF3H8EZ",
+    "expect": 1.0,
+    "rank": 22,
+    "subs_now": 57,
+    "exp": "2026-12-01T10:23:05.013Z"
+   },
+   {
+    "code": "TSK-D6YBKCV2",
+    "expect": 0.1,
+    "rank": 14,
+    "subs_now": 22,
+    "exp": "2026-11-29T03:36:17.616Z"
+   },
+   {
+    "code": "TSK-QD3A1YZ7",
+    "expect": 0.1,
+    "rank": 55,
+    "subs_now": 68,
+    "exp": "2026-11-25T00:08:13.342Z"
+   },
+   {
+    "code": "TSK-SS2ZG772",
+    "expect": 0.1,
+    "rank": 26,
+    "subs_now": 32,
+    "exp": "2026-11-29T04:34:22.285Z"
+   },
+   {
+    "code": "TSK-9E9AMJWV",
+    "expect": 0.05,
+    "rank": 30,
+    "subs_now": 57,
+    "exp": "2026-11-24T21:02:54.866Z"
+   },
+   {
+    "code": "TSK-DR6AWXY6",
+    "expect": 0.05,
+    "rank": 42,
+    "subs_now": 81,
+    "exp": "2026-11-24T20:59:56.143Z"
+   },
+   {
+    "code": "TSK-WHM01BJD",
+    "expect": 0.05,
+    "rank": 40,
+    "subs_now": 76,
+    "exp": "2026-11-24T20:54:15.703Z"
+   },
+   {
+    "code": "TSK-WDV7EXQ3",
+    "expect": 0.05,
+    "rank": 37,
+    "subs_now": 78,
+    "exp": "2026-11-24T20:38:57.013Z"
+   },
+   {
+    "code": "TSK-9JXR7686",
+    "expect": 0.042,
+    "rank": 15,
+    "subs_now": 36,
+    "exp": "2026-11-29T23:20:36.451Z"
+   }
+  ]
+ },
+ "services": [
+  {
+   "name": "colony_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "The Colony 已核实放弃（结算限制）",
+   "script": "D:/mcode/cash50/tools/colony/colony_watch.py",
+   "pids": [],
+   "hb_age_s": 50581.1,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T13:08:45+00:00 rpc https://base-rpc.publicnode.com failed <urlopen error timed out>",
+    "2026-11-25T13:10:00+00:00 rpc https://base-rpc.publicnode.com failed <urlopen error timed out>",
+    "2026-11-25T13:11:07+00:00 rpc https://base-rpc.publicnode.com failed <urlopen error timed out>",
+    "2026-11-25T13:12:10+00:00 rpc https://base-rpc.publicnode.com failed <urlopen error timed out>"
+   ]
+  },
+  {
+   "name": "acp_daemon",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "ACP 反复报 ERR_MODULE_NOT_FOUND，无产出",
+   "script": "D:/mcode/cash50/tools/acp/acp_daemon.py",
+   "pids": [],
+   "hb_age_s": 50552.3,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T11:59:03+00:00 offerings refreshed: 6",
+    "2026-11-25T12:09:18+00:00 offerings refreshed: 6",
+    "2026-11-25T13:08:17+00:00 offerings refreshed: 6",
+    "2026-11-25T13:08:19+00:00 listener started pid=18200"
+   ]
+  },
+  {
+   "name": "bothire_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无到账记录",
+   "script": "D:/mcode/cash50/tools/market/bothire_watch.py",
+   "pids": [],
+   "hb_age_s": 50538.3,
+   "hb_stale": true,
+   "log_tail": []
+  },
+  {
+   "name": "hashn_knock_fire",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "旧版敲门(打的是卖家listing)，已被 demand_knock 取代，保持停用",
+   "script": "D:/mcode/cash50/tools/scout/hashn_knock_fire.py",
+   "pids": [],
+   "hb_age_s": 50763.5,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T13:08:08+00:00 runner started, not before 2026-11-20T01:45:00Z",
+    "2026-11-25T13:08:10+00:00 SKIP pending knock exists on e34a6321-ea02-44fa-8e09-9258da336dc1",
+    "2026-11-25T13:08:10+00:00 SKIP pending knock exists on 83180326-3e55-4a26-b608-87fb66677d9d",
+    "2026-11-25T13:08:10+00:00 cycle done sent=0"
+   ]
+  },
+  {
+   "name": "serveo_subdomain_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "仅服务于已放弃的 sell 站",
+   "script": "D:/mcode/cash50/tools/sell/serveo_subdomain_watch.py",
+   "pids": [],
+   "hb_age_s": 50525.7,
+   "hb_stale": true,
+   "log_tail": []
+  },
+  {
+   "name": "tm_submit_inline",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "统一提交入口，inline 提交不消耗上传配额",
+   "script": "D:/mcode/cash50/tools/auto/tm_submit_inline.py",
+   "pids": [
+    27124
+   ],
+   "hb_age_s": 276.7,
+   "hb_stale": false,
+   "log_tail": [
+    "2026-11-26T02:39:25Z inline queue empty (55 tracked tasks, 76 already submitted)",
+    "2026-11-26T02:49:28Z inline queue empty (55 tracked tasks, 76 already submitted)",
+    "2026-11-26T02:59:31Z inline queue empty (55 tracked tasks, 76 already submitted)",
+    "2026-11-26T03:09:35Z inline queue empty (55 tracked tasks, 76 already submitted)"
+   ]
+  },
+  {
+   "name": "deskcrew_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无产出",
+   "script": "D:/mcode/cash50/tools/auto/deskcrew_watch.py",
+   "pids": [],
+   "hb_age_s": 50578.4,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T12:12:23Z open=1 rows=1 eligible=1 won=0 paid=0",
+    "2026-11-25T13:08:06Z watcher start interval=180s",
+    "2026-11-25T13:08:10Z open=1 rows=1 eligible=1 won=0 paid=0",
+    "2026-11-25T13:11:13Z open=1 rows=1 eligible=1 won=0 paid=0"
+   ]
+  },
+  {
+   "name": "x402hosting_renew",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "托管续费改走自有静态站",
+   "script": "D:/mcode/cash50/tools/sell/x402hosting_renew_watch.py",
+   "pids": [],
+   "hb_age_s": 50738.6,
+   "hb_stale": true,
+   "log_tail": []
+  },
+  {
+   "name": "forge_enter_watch",
+   "group": "Forge交付",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "Forge 抢单观察",
+   "script": "D:/mcode/cash50/tools/auto/forge_enter_watch.py",
+   "pids": [
+    84940
+   ],
+   "hb_age_s": 30.8,
+   "hb_stale": false,
+   "log_tail": [
+    "  File \"C:\\Users\\climb\\.minimax\\sessions\\mvs_cd4407c2f278445cbc4beba21650397e\\workspace\\cash50\\tools\\auto\\forge_auto_enter.py\", line 361, in <lambda>",
+    "    prep = prepared.get(key)",
+    "                        ^^^^",
+    "TypeError: bad operand type for unary -: 'str'"
+   ]
+  },
+  {
+   "name": "forge_auto_deliver",
+   "group": "Forge交付",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "agent-forge 作品自动交付（$3-4/单）",
+   "script": "D:/mcode/cash50/tools/auto/forge_auto_deliver.py",
+   "pids": [
+    24032
+   ],
+   "hb_age_s": 83.9,
+   "hb_stale": false,
+   "log_tail": [
+    "{\"t\": \"2026-11-25T10:22:19Z\", \"msg\": \"watcher up\", \"pid\": 15456}",
+    "{\"t\": \"2026-11-25T11:38:28Z\", \"msg\": \"watcher up\", \"pid\": 4280}",
+    "{\"t\": \"2026-11-25T13:08:06Z\", \"msg\": \"watcher up\", \"pid\": 16044}",
+    "{\"t\": \"2026-11-26T00:48:48Z\", \"msg\": \"watcher up\", \"pid\": 24032}"
+   ]
+  },
+  {
+   "name": "forge_pending_submit",
+   "group": "Forge交付",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "Forge 待提交队列",
+   "script": "D:/mcode/cash50/tools/auto/forge_pending_submit.py",
+   "pids": [
+    104272
+   ],
+   "hb_age_s": 47.1,
+   "hb_stale": false,
+   "log_tail": [
+    "{\"t\": \"2026-11-26T03:13:19Z\", \"msg\": \"check not passed\", \"item\": \"basic-strategy\", \"status\": \"failed\"}",
+    "{\"t\": \"2026-11-26T03:13:21Z\", \"msg\": \"check not passed\", \"item\": \"ui-suits\", \"status\": \"failed\"}",
+    "{\"t\": \"2026-11-26T03:13:23Z\", \"msg\": \"check not passed\", \"item\": \"say-wager\", \"status\": \"failed\"}",
+    "{\"t\": \"2026-11-26T03:13:25Z\", \"msg\": \"check not passed\", \"item\": \"art-table-event-horizon\", \"status\": \"failed\"}"
+   ]
+  },
+  {
+   "name": "service_monitor",
+   "group": "监控",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "已被 desk.py 指挥台取代",
+   "script": "D:/mcode/cash50/tools/auto/service_monitor.py",
+   "pids": [],
+   "hb_age_s": 50540.6,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T13:09:46Z overall=bad ok=16 warn=7 bad=8 unknown=0",
+    "2026-11-25T13:10:28Z overall=bad ok=16 warn=7 bad=8 unknown=0",
+    "2026-11-25T13:11:12Z overall=bad ok=16 warn=7 bad=8 unknown=0",
+    "2026-11-25T13:11:51Z overall=bad ok=15 warn=8 bad=8 unknown=0"
+   ]
+  },
+  {
+   "name": "ready_lt_watch",
+   "group": "Forge交付",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "Forge ready_lt 观察",
+   "script": "D:/mcode/cash50/tools/auto/ready_lt_watch_and_deliver.py",
+   "pids": [
+    99432
+   ],
+   "hb_age_s": 21.3,
+   "hb_stale": false,
+   "log_tail": [
+    "NOTICE_RENEWED",
+    "NOTICE_RENEWED",
+    "NOTICE_RENEWED",
+    "NOTICE_RENEWED"
+   ]
+  },
+  {
+   "name": "tm_pool_radar",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "扫描新开的池",
+   "script": "D:/mcode/cash50/tools/auto/tm_pool_radar.py",
+   "pids": [
+    107912
+   ],
+   "hb_age_s": 178.3,
+   "hb_stale": false,
+   "log_tail": [
+    "03:02:03 project2 tasks=9",
+    "03:05:06 project2 tasks=9",
+    "03:08:10 project2 tasks=9",
+    "03:11:16 project2 tasks=9"
+   ]
+  },
+  {
+   "name": "tm_guaranteed_radar",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "扫描保证付费的开放池（到达池的上游发现）",
+   "script": "D:/mcode/cash50/tools/auto/tm_guaranteed_radar.py",
+   "pids": [
+    93728
+   ],
+   "hb_age_s": 25.3,
+   "hb_stale": false,
+   "log_tail": [
+    "11:14:50 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。>",
+    "02:06:12 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error Remote end closed connection without response>",
+    "02:06:40 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error Remote end closed connection without response>",
+    "02:08:15 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error Remote end closed connection without response>"
+   ]
+  },
+  {
+   "name": "tm_rule_fast",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "到达池抢单核心：规则付费池按到达顺序派奖，17/17 次都赶在名额内到账 0.2/单",
+   "script": "D:/mcode/cash50/tools/auto/tm_rule_fast.py",
+   "pids": [
+    41332
+   ],
+   "hb_age_s": 1.1,
+   "hb_stale": false,
+   "log_tail": [
+    "02:07:29 fetch 4217 failed: <urlopen error [Errno 11001] getaddrinfo failed>",
+    "02:07:29 fetch 8453 failed: <urlopen error [Errno 11001] getaddrinfo failed>",
+    "02:08:19 fetch 4217 failed: <urlopen error [Errno 11001] getaddrinfo failed>",
+    "02:08:19 fetch 8453 failed: <urlopen error [Errno 11001] getaddrinfo failed>"
+   ]
+  },
+  {
+   "name": "synmerco_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无到账记录",
+   "script": "D:/mcode/cash50/tools/auto/synmerco_watch.py",
+   "pids": [],
+   "hb_age_s": 50583.7,
+   "hb_stale": true,
+   "log_tail": [
+    "synmerco_watch started did=did:pkh:eip155:8453:0x1cc55f36bee4378672d6971f0f772346f923d1ac",
+    "synmerco_watch started did=did:pkh:eip155:8453:0x1cc55f36bee4378672d6971f0f772346f923d1ac",
+    "synmerco_watch started did=did:pkh:eip155:8453:0x1cc55f36bee4378672d6971f0f772346f923d1ac",
+    "synmerco_watch started did=did:pkh:eip155:8453:0x1cc55f36bee4378672d6971f0f772346f923d1ac"
+   ]
+  },
+  {
+   "name": "hashn_demand_knock",
+   "group": "其他",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "hashn 买家需求敲门(USDC/Base)：394需求/130匹配，30分钟一轮，日上限10次",
+   "script": "D:/mcode/cash50/tools/scout/hashn_demand_knock.py",
+   "pids": [
+    42020
+   ],
+   "hb_age_s": 1537.7,
+   "hb_stale": false,
+   "log_tail": [
+    "2026-11-26T02:48:19+00:00 SKIP pending knock",
+    "2026-11-26T02:48:20+00:00 KNOCK",
+    "2026-11-26T02:48:25+00:00 KNOCK",
+    "2026-11-26T02:48:30+00:00 KNOCK"
+   ]
+  },
+  {
+   "name": "moltjobs_autobid",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "moltjobs 需注册邮箱 claim，无产出",
+   "script": "D:/mcode/cash50/tools/auto/moltjobs_autobid.py",
+   "pids": [],
+   "hb_age_s": 50760.2,
+   "hb_stale": true,
+   "log_tail": []
+  },
+  {
+   "name": "frontier_pool_enter",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "Frontier 日批次进场器（22:52Z 开池）",
+   "script": "D:/mcode/cash50/tools/auto/frontier_pool_enter.py",
+   "pids": [
+    27012
+   ],
+   "hb_age_s": 2.1,
+   "hb_stale": false,
+   "log_tail": [
+    "2026-11-26T03:14:10Z skip TSK-M9KN2CDG: deliverable kind not recognised",
+    "2026-11-26T03:14:10Z skip TSK-RBKW1JMN: deliverable kind not recognised",
+    "2026-11-26T03:14:10Z skip TSK-4P4PPK54: deliverable kind not recognised",
+    "2026-11-26T03:14:10Z skip TSK-0HVS18XT: deliverable kind not recognised"
+   ]
+  },
+  {
+   "name": "cw_contract_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "ClawWork 需账号，无产出",
+   "script": "D:/mcode/cash50/tools/auto/cw_contract_watch.py",
+   "pids": [],
+   "hb_age_s": 50627.6,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T13:09:25Z NEW native hiring job 40c8ff4a | budget 10 | bids 6 | Fact-check report �� every claim sourced",
+    "2026-11-25T13:09:25Z NEW native hiring job 2b093b8a | budget 6 | bids 0 | Normalize a messy CSV to an exact schema + schema-valid JSON manifest",
+    "2026-11-25T13:09:52Z bid 79da3d5f job=ae86d938 status None -> pending",
+    "2026-11-25T13:10:24Z bid 53c16576 job=77df96be status None -> pending"
+   ]
+  },
+  {
+   "name": "elgora_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无到账记录",
+   "script": "D:/mcode/cash50/tools/auto/elgora_watch.py",
+   "pids": [],
+   "hb_age_s": 50580.7,
+   "hb_stale": true,
+   "log_tail": [
+    "10:59:01 fetch failed: Env: DOTENV_CONFIG_PATH not set; reading process.env only",
+    "Error: fetch failed",
+    "Caused by: Client network socket disconnected before secure TLS connection was established"
+   ]
+  },
+  {
+   "name": "dw_radar",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "dealwork 无产出",
+   "script": "D:/mcode/cash50/tools/auto/dw_radar.py",
+   "pids": [],
+   "hb_age_s": 50576.1,
+   "hb_stale": true,
+   "log_tail": [
+    "{\"at\": \"2026-11-25T09:32:16+00:00\", \"event\": \"radar start\", \"pid\": 102484}",
+    "{\"at\": \"2026-11-25T10:22:21+00:00\", \"event\": \"radar start\", \"pid\": 4184}",
+    "{\"at\": \"2026-11-25T11:38:29+00:00\", \"event\": \"radar start\", \"pid\": 12488}",
+    "{\"at\": \"2026-11-25T13:08:07+00:00\", \"event\": \"radar start\", \"pid\": 18496}"
+   ]
+  },
+  {
+   "name": "cw_radar",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "ClawWork 需账号，无产出",
+   "script": "D:/mcode/cash50/tools/auto/cw_radar.py",
+   "pids": [],
+   "hb_age_s": 50548.2,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T13:08:07Z cw_radar started pid=2208 dry=False",
+    "bid status 201 {\"data\": {\"id\": \"1d88ea93-aac9-4c79-bd28-df87410aaee1\", \"jobId\": \"2b093b8a-8751-4ec2-ad87-1a4088ab07a7\", \"bidderAccountId\": \"a06d2072-9dae-4687-9fa5-aeb16c93e474\", \"amount\": 5.88, \"status\": \"pending\"}}",
+    "LEDGER C:/Users/climb/.minimax/sessions/mvs_cd4407c2f278445cbc4beba21650397e/workspace/cash50\\data/work/mine/cw_bids.json bids 21",
+    "2026-11-25T13:09:01Z job 2b093b8a budget 6.0 bids 0 -> rc 0"
+   ]
+  },
+  {
+   "name": "dw_watch",
+   "group": "其他",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "dealwork 无产出",
+   "script": "D:/mcode/cash50/tools/auto/dw_watch.py",
+   "pids": [],
+   "hb_age_s": 50574.6,
+   "hb_stale": true,
+   "log_tail": [
+    "2026-11-25T12:13:01Z jobs=0 req=0 con=0",
+    "2026-11-25T13:08:11Z jobs=0 req=0 con=0",
+    "2026-11-25T13:09:45Z jobs=0 req=0 con=0",
+    "2026-11-25T13:11:17Z jobs=0 req=0 con=0"
+   ]
+  },
+  {
+   "name": "confirm_sweep",
+   "group": "账本",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无产出",
+   "script": "D:/mcode/cash50/tools/auto/confirm_sweep.py",
+   "pids": [],
+   "hb_age_s": 50585.0,
+   "hb_stale": true,
+   "log_tail": [
+    "{\"t\": \"2026-11-24T13:32:38Z\", \"msg\": \"confirmed\", \"repo\": \"starfall-21\", \"item\": \"say-wager\", \"commit\": \"bccc54f18\", \"sid\": \"c5a92c71\"}",
+    "{\"t\": \"2026-11-24T13:35:38Z\", \"msg\": \"no taskmarket entry id, skipped\", \"repo\": \"open-labels\", \"item\": \"open-document\", \"task\": \"0xb9256821fd\"}",
+    "{\"t\": \"2026-11-24T13:36:09Z\", \"msg\": \"confirmed\", \"repo\": \"starfall-21\", \"item\": \"say-wager\", \"commit\": \"bccc54f18\", \"sid\": \"c5a92c71\"}",
+    "{\"t\": \"2026-11-24T13:39:09Z\", \"msg\": \"no taskmarket entry id, skipped\", \"repo\": \"starfall-21\", \"item\": \"shoe\", \"task\": \"0xf0ae9447d1\"}"
+   ]
+  },
+  {
+   "name": "ledger_sync_daemon",
+   "group": "账本",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "链上成交台账同步（收入真值的数据源）",
+   "script": "D:/mcode/cash50/tools/auto/ledger_sync_daemon.py",
+   "pids": [
+    59388
+   ],
+   "hb_age_s": 108.5,
+   "hb_stale": false,
+   "log_tail": [
+    "{\"t\": \"2026-11-26T02:24:59Z\", \"msg\": \"sync ok\", \"seconds\": 147.8, \"stdout\": \"{\\\"touched\\\": 174, \\\"platform_rows\\\": 244, \\\"tracked\\\": 174, \\\"pending_usd\\\": 34.58, \\\"pending_receivable_usd\\\": 1.2926, \\\"pending_uncollectible_usd\\\": 33.2874, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
+    "{\"t\": \"2026-11-26T02:37:40Z\", \"msg\": \"sync ok\", \"seconds\": 160.9, \"stdout\": \"{\\\"touched\\\": 174, \\\"platform_rows\\\": 244, \\\"tracked\\\": 174, \\\"pending_usd\\\": 34.58, \\\"pending_receivable_usd\\\": 1.2926, \\\"pending_uncollectible_usd\\\": 33.2874, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
+    "{\"t\": \"2026-11-26T02:50:09Z\", \"msg\": \"sync ok\", \"seconds\": 149.1, \"stdout\": \"{\\\"touched\\\": 174, \\\"platform_rows\\\": 244, \\\"tracked\\\": 174, \\\"pending_usd\\\": 34.58, \\\"pending_receivable_usd\\\": 1.2926, \\\"pending_uncollectible_usd\\\": 33.2874, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}",
+    "{\"t\": \"2026-11-26T03:02:23Z\", \"msg\": \"sync ok\", \"seconds\": 134.4, \"stdout\": \"{\\\"touched\\\": 174, \\\"platform_rows\\\": 244, \\\"tracked\\\": 174, \\\"pending_usd\\\": 34.58, \\\"pending_receivable_usd\\\": 1.2926, \\\"pending_uncollectible_usd\\\": 33.2874, \\\"won_usd\\\": 5.7054, \\\"lost_usd\\\": 64.99, \\\"fee_paid_ousd\\\": 0.003, \\\"conditional_usd\\\": 236.35}\", \"stderr\": \"\"}"
+   ]
+  },
+  {
+   "name": "tm_project2_backing",
+   "group": "到达池抢单",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无产出",
+   "script": "D:/mcode/cash50/tools/auto/tm_project2_backing.py",
+   "pids": [],
+   "hb_age_s": 50689.1,
+   "hb_stale": true,
+   "log_tail": []
+  },
+  {
+   "name": "tm_project_claim",
+   "group": "到达池抢单",
+   "status": "PAUSED",
+   "alive": false,
+   "enabled": false,
+   "money": false,
+   "purpose": "无产出",
+   "script": "D:/mcode/cash50/tools/auto/tm_project_claim.py",
+   "pids": [],
+   "hb_age_s": 56139.9,
+   "hb_stale": true,
+   "log_tail": [
+    "{\"t\": \"2026-11-25T08:48:37Z\", \"msg\": \"api failed: URLError(ConnectionRefusedError(10061, '由于目标计算机积极拒绝，无法连接。', None, 10061, None))\", \"path\": \"/api/projects/2?chainId=4217\"}",
+    "{\"t\": \"2026-11-25T09:18:41Z\", \"msg\": \"api failed: URLError(ConnectionRefusedError(10061, '由于目标计算机积极拒绝，无法连接。', None, 10061, None))\", \"path\": \"/api/projects/2?chainId=4217\"}",
+    "{\"t\": \"2026-11-25T09:32:29Z\", \"msg\": \"api failed: URLError(ConnectionRefusedError(10061, '由于目标计算机积极拒绝，无法连接。', None, 10061, None))\", \"path\": \"/api/projects/2?chainId=4217\"}"
+   ]
+  },
+  {
+   "name": "income_truth_watch",
+   "group": "账本",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "刷新收入真值（毛额/净额）",
+   "script": "D:/mcode/cash50/tools/auto/income_truth_watch.py",
+   "pids": [
+    78512
+   ],
+   "hb_age_s": 622.8,
+   "hb_stale": false,
+   "log_tail": []
+  },
+  {
+   "name": "tm_duplicate_audit",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": false,
+   "purpose": "重复投递审计（防一钱包多投被判无效）",
+   "script": "D:/mcode/cash50/tools/auto/tm_duplicate_audit.py",
+   "pids": [
+    109560
+   ],
+   "hb_age_s": 8707.3,
+   "hb_stale": false,
+   "log_tail": []
+  },
+  {
+   "name": "tm_task_poller",
+   "group": "到达池抢单",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "共享任务列表缓存，避免多守护并发拉取触发 429",
+   "script": "D:/mcode/cash50/tools/auto/tm_task_poller.py",
+   "pids": [
+    18936
+   ],
+   "hb_age_s": 7.1,
+   "hb_stale": false,
+   "log_tail": [
+    "02:07:06 poll incomplete: {'4217': \"URLError(gaierror(11001, 'getaddrinfo failed'))\", '8453': \"URLError(gaierror(11001, 'getaddrinfo failed'))\"}",
+    "02:08:22 poll incomplete: {'4217': \"URLError(gaierror(11001, 'getaddrinfo failed'))\", '8453': \"URLError(gaierror(11001, 'getaddrinfo failed'))\"}",
+    "03:08:55 cache write failed: PermissionError(13, '拒绝访问。')",
+    "03:13:59 cache write failed: PermissionError(13, '拒绝访问。')"
+   ]
+  },
+  {
+   "name": "egress_proxy",
+   "group": "网络",
+   "status": "RUNNING",
+   "alive": true,
+   "enabled": true,
+   "money": true,
+   "purpose": "本地出网代理",
+   "script": "D:/mcode/cash50/tools/auto/local_egress_proxy.py",
+   "pids": [
+    95828
+   ],
+   "hb_age_s": 22.7,
+   "hb_stale": false,
+   "log_tail": [
+    "11:09:51 conn error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。",
+    "11:10:58 conn error [Errno 11001] getaddrinfo failed",
+    "11:12:07 conn error [Errno 11001] getaddrinfo failed",
+    "11:13:16 conn error [Errno 11001] getaddrinfo failed"
+   ]
+  }
+ ]
+}
