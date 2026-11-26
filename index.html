@@ -156,10 +156,15 @@ function money4(v){var n=num(v);return n==='—'?'—':'$'+n.toFixed(4)}
 function age(sec){var n=num(sec);if(n==='—')return '—';n=Number(n);
   if(n<60)return Math.round(n)+' 秒前';if(n<3600)return Math.round(n/60)+' 分钟前';
   if(n<86400)return (n/3600).toFixed(1)+' 小时前';return (n/86400).toFixed(1)+' 天前'}
-function hbText(s){var a=num(s.hb_age_s);if(a==='—')return '—';
-  return age(s.hb_age_s)+(s.hb_stale?' · 过期':'')}
-function hbBucket(s){if(s.hb_age_s===null||s.hb_age_s===undefined)return 'none';
-  if(s.hb_stale)return 'stale';return 'ok'}
+function hbAgeSec(s){
+  if(s.hb_at){var t=Date.parse(s.hb_at);if(!isNaN(t))return Math.max(0,Math.round((Date.now()-t)/1000));}
+  if(s.hb_age_s===null||s.hb_age_s===undefined)return null;
+  return Math.round(Number(s.hb_age_s));
+}
+function hbText(s){var a=hbAgeSec(s);if(a===null)return '—';
+  return age(a)+(s.hb_stale?' · 过期':'')}
+function hbBucket(s){var a=hbAgeSec(s);if(a===null)return 'none';
+  if(s.hb_stale)return 'stale';if(a>600)return 'aging';return 'ok'}
 
 var DATA=null, SORT={k:'status',dir:-1}, ROWS=[], LAST=null;
 
@@ -184,7 +189,8 @@ function tiles(){
 function tmPanel(){
   var t=DATA.taskmarket||{};
   document.getElementById('tmcap').innerHTML =
-    '在评 = 我方已投递尚未派奖的单；待收金额 = 存活池按当前名次的预期到手（USDC）。源数据时间：' +
+    '在评 = 我方已投递尚未派奖的单；待收金额 = 存活池按当前名次的预期到手（USDC）。' +
+    '已派奖单数来自投递快照，真实到手金额以「真实净收入」为准。源数据时间：' +
     esc(t.sources_text||'—');
   var ms=[
     ['在评单数', num(t.under_review_count), '已投递 · 未派奖'],
@@ -227,8 +233,8 @@ function svcTable(){
     var st=String(s.status||'');
     var cls=/RUNNING/.test(st)?'pRUNNING':/STALLED/.test(st)?'pSTALLED':/PAUSED/.test(st)?'pPAUSED':'pSTOPPED';
     var bk=hbBucket(s);
-    var bktxt=bk==='stale'?'过期':bk==='none'?'无心跳':'新鲜';
-    var bkcls=bk==='stale'?'pSTALLED':bk==='none'?'pNOHB':'pRUNNING';
+    var bktxt=bk==='stale'?'过期':bk==='aging'?'偏旧':bk==='none'?'无心跳':'新鲜';
+    var bkcls=(bk==='stale'||bk==='aging')?'pSTALLED':bk==='none'?'pNOHB':'pRUNNING';
     return '<tr><td class="nm">'+esc(s.name)+'<small>'+esc(s.script||'')+'</small></td>'+
       '<td class="dim">'+esc(s.group||'—')+'</td>'+
       '<td><span class="pill '+cls+'">'+esc(st||'—')+'</span></td>'+
