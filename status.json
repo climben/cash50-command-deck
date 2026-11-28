@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-28T05:05:39Z",
- "published_at": "2026-11-28T05:05:44Z",
+ "generated_at": "2026-11-28T05:09:42Z",
+ "published_at": "2026-11-28T05:09:44Z",
  "summary": {
   "total": 37,
   "running": 19,
   "paused": 18,
-  "stalled": 3,
+  "stalled": 0,
   "money_services": 12
  },
  "money": {
@@ -29,7 +29,7 @@
   "awarded_to_us_count": 5,
   "submitted_count": 95,
   "sources": {
-   "desk_state": "2026-11-28T05:05:39Z",
+   "desk_state": "2026-11-28T05:09:42Z",
    "income_truth": "2026-11-28T04:58:56Z",
    "tm_pending": "2026-11-28T04:50:58Z",
    "tm_status": "2026-11-28T03:09:01Z"
@@ -157,7 +157,7 @@
    "purpose": "The Colony 已核实放弃（结算限制）",
    "script": "D:/mcode/cash50/tools/colony/colony_watch.py",
    "pids": [],
-   "hb_age_s": 230068.4,
+   "hb_age_s": 230311.4,
    "hb_at": "2026-11-25T13:11:11Z",
    "hb_stale": true,
    "log_tail": [
@@ -177,7 +177,7 @@
    "purpose": "ACP 反复报 ERR_MODULE_NOT_FOUND，无产出",
    "script": "D:/mcode/cash50/tools/acp/acp_daemon.py",
    "pids": [],
-   "hb_age_s": 230039.5,
+   "hb_age_s": 230282.6,
    "hb_at": "2026-11-25T13:11:40Z",
    "hb_stale": true,
    "log_tail": [
@@ -197,7 +197,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/market/bothire_watch.py",
    "pids": [],
-   "hb_age_s": 230025.5,
+   "hb_age_s": 230268.5,
    "hb_at": "2026-11-25T13:11:54Z",
    "hb_stale": true,
    "log_tail": []
@@ -212,8 +212,8 @@
    "purpose": "旧版敲门(打的是卖家listing)，已被 demand_knock 取代，保持停用",
    "script": "D:/mcode/cash50/tools/scout/hashn_knock_fire.py",
    "pids": [],
-   "hb_age_s": 185.2,
-   "hb_at": "2026-11-28T05:02:34Z",
+   "hb_age_s": 77.5,
+   "hb_at": "2026-11-28T05:08:25Z",
    "hb_stale": false,
    "log_tail": [
     "2026-11-25T13:08:08+00:00 runner started, not before 2026-11-20T01:45:00Z",
@@ -232,7 +232,7 @@
    "purpose": "仅服务于已放弃的 sell 站",
    "script": "D:/mcode/cash50/tools/sell/serveo_subdomain_watch.py",
    "pids": [],
-   "hb_age_s": 230012.9,
+   "hb_age_s": 230255.9,
    "hb_at": "2026-11-25T13:12:06Z",
    "hb_stale": true,
    "log_tail": []
@@ -249,7 +249,7 @@
    "pids": [
     19832
    ],
-   "hb_age_s": 298.7,
+   "hb_age_s": 541.7,
    "hb_at": "2026-11-28T05:00:40Z",
    "hb_stale": false,
    "log_tail": [
@@ -269,7 +269,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/deskcrew_watch.py",
    "pids": [],
-   "hb_age_s": 230065.6,
+   "hb_age_s": 230308.7,
    "hb_at": "2026-11-25T13:11:13Z",
    "hb_stale": true,
    "log_tail": [
@@ -289,7 +289,7 @@
    "purpose": "托管续费改走自有静态站",
    "script": "D:/mcode/cash50/tools/sell/x402hosting_renew_watch.py",
    "pids": [],
-   "hb_age_s": 230225.8,
+   "hb_age_s": 230468.9,
    "hb_at": "2026-11-25T13:08:33Z",
    "hb_stale": true,
    "log_tail": []
@@ -306,8 +306,8 @@
    "pids": [
     112076
    ],
-   "hb_age_s": 18.8,
-   "hb_at": "2026-11-28T05:05:20Z",
+   "hb_age_s": 32.5,
+   "hb_at": "2026-11-28T05:09:10Z",
    "hb_stale": false,
    "log_tail": [
     "  OPPORTUNITY TSK-5G7DHNK0   open-card-program 1.0    subs=0    ready=False check=.plan/checks/open-card-program.test.mjs",
@@ -328,8 +328,8 @@
    "pids": [
     38620
    ],
-   "hb_age_s": 61.2,
-   "hb_at": "2026-11-28T05:04:38Z",
+   "hb_age_s": 64.3,
+   "hb_at": "2026-11-28T05:08:38Z",
    "hb_stale": false,
    "log_tail": [
     "{\"t\": \"2026-11-25T13:08:06Z\", \"msg\": \"watcher up\", \"pid\": 16044}",
@@ -350,14 +350,14 @@
    "pids": [
     13244
    ],
-   "hb_age_s": 14.7,
-   "hb_at": "2026-11-28T05:05:44Z",
+   "hb_age_s": 6.7,
+   "hb_at": "2026-11-28T05:09:35Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"t\": \"2026-11-28T03:33:42Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-28T03:35:02Z\", \"msg\": \"entry not issued yet\", \"item\": \"part-schema\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-28T03:35:16Z\", \"msg\": \"entry not issued yet\", \"item\": \"contributing-safety\", \"code\": \"push_required\"}",
-    "{\"t\": \"2026-11-28T03:35:29Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}"
+    "{\"t\": \"2026-11-28T03:35:29Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-28T05:08:02Z\", \"msg\": \"entry not issued yet\", \"item\": \"part-schema\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-28T05:08:18Z\", \"msg\": \"entry not issued yet\", \"item\": \"contributing-safety\", \"code\": \"push_required\"}",
+    "{\"t\": \"2026-11-28T05:08:35Z\", \"msg\": \"entry not issued yet\", \"item\": \"rules\", \"code\": \"push_required\"}"
    ]
   },
   {
@@ -370,7 +370,7 @@
    "purpose": "已被 desk.py 指挥台取代",
    "script": "D:/mcode/cash50/tools/auto/service_monitor.py",
    "pids": [],
-   "hb_age_s": 230027.8,
+   "hb_age_s": 230270.8,
    "hb_at": "2026-11-25T13:11:51Z",
    "hb_stale": true,
    "log_tail": [
@@ -392,20 +392,20 @@
    "pids": [
     65228
    ],
-   "hb_age_s": 2.4,
-   "hb_at": "2026-11-28T05:05:37Z",
+   "hb_age_s": 8.2,
+   "hb_at": "2026-11-28T05:09:34Z",
    "hb_stale": false,
    "log_tail": [
     "NOTICE_RENEW_RC 1",
     "NOTICE_RENEW_RC 1",
     "NOTICE_RENEW_RC 1",
-    "NOTICE_RENEW_RC 1"
+    "NOTICE_RENEWED"
    ]
   },
   {
    "name": "tm_pool_radar",
    "group": "到达池抢单",
-   "status": "STALLED",
+   "status": "RUNNING",
    "alive": true,
    "enabled": true,
    "money": true,
@@ -414,20 +414,20 @@
    "pids": [
     88528
    ],
-   "hb_age_s": 5547.4,
-   "hb_at": "2026-11-28T03:33:12Z",
-   "hb_stale": true,
+   "hb_age_s": 53.3,
+   "hb_at": "2026-11-28T05:08:49Z",
+   "hb_stale": false,
    "log_tail": [
-    "04:56:00 GET failed /api/projects/2?chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "04:59:56 GET failed /api/tasks?status=open&limit=100 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
     "05:00:52 GET failed /api/projects/2?chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:04:48 GET failed /api/tasks?status=open&limit=100 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    "05:04:48 GET failed /api/tasks?status=open&limit=100 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:05:44 GET failed /api/projects/2?chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:08:50 project2 tasks=11"
    ]
   },
   {
    "name": "tm_guaranteed_radar",
    "group": "到达池抢单",
-   "status": "STALLED",
+   "status": "RUNNING",
    "alive": true,
    "enabled": true,
    "money": true,
@@ -436,14 +436,14 @@
    "pids": [
     93728
    ],
-   "hb_age_s": 5429.6,
-   "hb_at": "2026-11-28T03:35:09Z",
-   "hb_stale": true,
+   "hb_age_s": 19.6,
+   "hb_at": "2026-11-28T05:09:23Z",
+   "hb_stale": false,
    "log_tail": [
-    "05:02:44 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:03:14 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
     "05:04:44 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:05:14 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    "05:05:14 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:06:44 GET failed /api/tasks?status=open&limit=100&chainId=4217 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:07:14 GET failed /api/tasks?status=open&limit=100&chainId=8453 <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
    ]
   },
   {
@@ -458,14 +458,14 @@
    "pids": [
     112576
    ],
-   "hb_age_s": 8.4,
-   "hb_at": "2026-11-28T05:05:31Z",
+   "hb_age_s": 7.0,
+   "hb_at": "2026-11-28T05:09:43Z",
    "hb_stale": false,
    "log_tail": [
-    "05:04:57 fetch 4217 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:04:58 fetch 8453 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:05:24 fetch 4217 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "05:05:25 fetch 8453 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    "05:06:45 fetch 4217 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:06:45 fetch 8453 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:07:10 fetch 4217 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
+    "05:07:10 fetch 8453 failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
    ]
   },
   {
@@ -478,7 +478,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/auto/synmerco_watch.py",
    "pids": [],
-   "hb_age_s": 230070.9,
+   "hb_age_s": 230314.0,
    "hb_at": "2026-11-25T13:11:08Z",
    "hb_stale": true,
    "log_tail": [
@@ -500,7 +500,7 @@
    "pids": [
     115952
    ],
-   "hb_age_s": 474.6,
+   "hb_age_s": 717.7,
    "hb_at": "2026-11-28T04:57:45Z",
    "hb_stale": false,
    "log_tail": [
@@ -520,7 +520,7 @@
    "purpose": "moltjobs 需注册邮箱 claim，无产出",
    "script": "D:/mcode/cash50/tools/auto/moltjobs_autobid.py",
    "pids": [],
-   "hb_age_s": 230247.4,
+   "hb_age_s": 230490.5,
    "hb_at": "2026-11-25T13:08:12Z",
    "hb_stale": true,
    "log_tail": []
@@ -537,14 +537,14 @@
    "pids": [
     32276
    ],
-   "hb_age_s": 10.3,
-   "hb_at": "2026-11-28T05:05:29Z",
+   "hb_age_s": 0.2,
+   "hb_at": "2026-11-28T05:09:43Z",
    "hb_stale": false,
    "log_tail": [
-    "2026-11-28T05:02:23Z cycle error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "2026-11-28T05:03:18Z cycle error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "2026-11-28T05:04:13Z cycle error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>",
-    "2026-11-28T05:05:08Z cycle error: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>"
+    "2026-11-28T05:07:35Z skip TSK-M9KN2CDG: deliverable kind not recognised",
+    "2026-11-28T05:07:35Z skip TSK-RBKW1JMN: deliverable kind not recognised",
+    "2026-11-28T05:07:35Z skip TSK-4P4PPK54: deliverable kind not recognised",
+    "2026-11-28T05:07:35Z skip TSK-0HVS18XT: deliverable kind not recognised"
    ]
   },
   {
@@ -557,7 +557,7 @@
    "purpose": "ClawWork 需账号，无产出",
    "script": "D:/mcode/cash50/tools/auto/cw_contract_watch.py",
    "pids": [],
-   "hb_age_s": 230114.8,
+   "hb_age_s": 230357.9,
    "hb_at": "2026-11-25T13:10:24Z",
    "hb_stale": true,
    "log_tail": [
@@ -577,7 +577,7 @@
    "purpose": "无到账记录",
    "script": "D:/mcode/cash50/tools/auto/elgora_watch.py",
    "pids": [],
-   "hb_age_s": 230068.0,
+   "hb_age_s": 230311.1,
    "hb_at": "2026-11-25T13:11:11Z",
    "hb_stale": true,
    "log_tail": [
@@ -596,7 +596,7 @@
    "purpose": "dealwork 无产出",
    "script": "D:/mcode/cash50/tools/auto/dw_radar.py",
    "pids": [],
-   "hb_age_s": 230063.4,
+   "hb_age_s": 230306.5,
    "hb_at": "2026-11-25T13:11:16Z",
    "hb_stale": true,
    "log_tail": [
@@ -616,7 +616,7 @@
    "purpose": "ClawWork 需账号，无产出",
    "script": "D:/mcode/cash50/tools/auto/cw_radar.py",
    "pids": [],
-   "hb_age_s": 230035.4,
+   "hb_age_s": 230278.5,
    "hb_at": "2026-11-25T13:11:44Z",
    "hb_stale": true,
    "log_tail": [
@@ -636,7 +636,7 @@
    "purpose": "dealwork 无产出",
    "script": "D:/mcode/cash50/tools/auto/dw_watch.py",
    "pids": [],
-   "hb_age_s": 230061.8,
+   "hb_age_s": 230304.9,
    "hb_at": "2026-11-25T13:11:17Z",
    "hb_stale": true,
    "log_tail": [
@@ -656,7 +656,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/confirm_sweep.py",
    "pids": [],
-   "hb_age_s": 230072.3,
+   "hb_age_s": 230315.4,
    "hb_at": "2026-11-25T13:11:07Z",
    "hb_stale": true,
    "log_tail": [
@@ -678,7 +678,7 @@
    "pids": [
     61584
    ],
-   "hb_age_s": 87.5,
+   "hb_age_s": 330.6,
    "hb_at": "2026-11-28T05:04:12Z",
    "hb_stale": false,
    "log_tail": [
@@ -698,7 +698,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/tm_project2_backing.py",
    "pids": [],
-   "hb_age_s": 230176.3,
+   "hb_age_s": 230419.4,
    "hb_at": "2026-11-25T13:09:23Z",
    "hb_stale": true,
    "log_tail": []
@@ -713,7 +713,7 @@
    "purpose": "无产出",
    "script": "D:/mcode/cash50/tools/auto/tm_project_claim.py",
    "pids": [],
-   "hb_age_s": 235627.1,
+   "hb_age_s": 235870.2,
    "hb_at": "2026-11-25T11:38:32Z",
    "hb_stale": true,
    "log_tail": [
@@ -734,7 +734,7 @@
    "pids": [
     37508
    ],
-   "hb_age_s": 403.3,
+   "hb_age_s": 646.4,
    "hb_at": "2026-11-28T04:58:56Z",
    "hb_stale": false,
    "log_tail": []
@@ -751,7 +751,7 @@
    "pids": [
     109560
    ],
-   "hb_age_s": 3668.1,
+   "hb_age_s": 3911.2,
    "hb_at": "2026-11-28T04:04:31Z",
    "hb_stale": false,
    "log_tail": []
@@ -759,7 +759,7 @@
   {
    "name": "tm_task_poller",
    "group": "到达池抢单",
-   "status": "STALLED",
+   "status": "RUNNING",
    "alive": true,
    "enabled": true,
    "money": true,
@@ -768,14 +768,14 @@
    "pids": [
     18936
    ],
-   "hb_age_s": 68.1,
-   "hb_at": "2026-11-28T05:04:31Z",
-   "hb_stale": true,
+   "hb_age_s": 10.3,
+   "hb_at": "2026-11-28T05:09:42Z",
+   "hb_stale": false,
    "log_tail": [
-    "04:59:53 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}",
     "05:01:33 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}",
     "05:03:02 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}",
-    "05:04:31 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}"
+    "05:04:31 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}",
+    "05:06:00 poll incomplete: {'4217': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\", '8453': \"URLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)'))\"}"
    ]
   },
   {
@@ -790,8 +790,8 @@
    "pids": [
     95828
    ],
-   "hb_age_s": 9.5,
-   "hb_at": "2026-11-28T05:05:30Z",
+   "hb_age_s": 15.3,
+   "hb_at": "2026-11-28T05:09:27Z",
    "hb_stale": false,
    "log_tail": [
     "13:01:28 conn error [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。",
@@ -812,14 +812,14 @@
    "pids": [
     81724
    ],
-   "hb_age_s": 3.3,
-   "hb_at": "2026-11-28T05:05:36Z",
+   "hb_age_s": 108.6,
+   "hb_at": "2026-11-28T05:07:54Z",
    "hb_stale": false,
    "log_tail": [
-    "{\"ts\": \"2026-11-28T04:53:36Z\", \"event\": \"repo_error\", \"error\": \"repo api 0: 20.205.243.168: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081) | proxy: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco\"}",
     "{\"ts\": \"2026-11-28T04:57:36Z\", \"event\": \"repo_error\", \"error\": \"repo api 0: 20.205.243.168: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081) | proxy: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco\"}",
     "{\"ts\": \"2026-11-28T05:01:36Z\", \"event\": \"repo_error\", \"error\": \"repo api 0: 20.205.243.168: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081) | proxy: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco\"}",
-    "{\"ts\": \"2026-11-28T05:05:36Z\", \"event\": \"repo_error\", \"error\": \"repo api 0: 20.205.243.168: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081) | proxy: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco\"}"
+    "{\"ts\": \"2026-11-28T05:05:36Z\", \"event\": \"repo_error\", \"error\": \"repo api 0: 20.205.243.168: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081) | proxy: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protoco\"}",
+    "{\"ts\": \"2026-11-28T05:07:54Z\", \"event\": \"pushed\", \"detail\": \"changed: status.json\", \"commit\": \"cb31484d07e937649ddf845c8f23af5fa73c6e66\", \"files\": [\".nojekyll\", \"index.html\", \"status.json\"], \"pages_url\": \"https://climben.github.io/cash50-command-deck/\", \"pages_status\": \"building\", \"data_generated_at\": \"2026-11-28T05:05:39Z\"}"
    ]
   },
   {
@@ -834,7 +834,7 @@
    "pids": [
     87756
    ],
-   "hb_age_s": 881.0,
+   "hb_age_s": 1124.1,
    "hb_at": "2026-11-28T04:50:58Z",
    "hb_stale": false,
    "log_tail": [
@@ -856,14 +856,14 @@
    "pids": [
     78320
    ],
-   "hb_age_s": 185.3,
-   "hb_at": "2026-11-28T05:02:34Z",
+   "hb_age_s": 77.6,
+   "hb_at": "2026-11-28T05:08:25Z",
    "hb_stale": false,
    "log_tail": [
-    "2026-11-28T03:29:16+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
     "2026-11-28T03:31:28+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
     "2026-11-28T03:33:37+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
-    "2026-11-28T03:35:53+00:00 buyer-side deal - our party is the payer, not ours to fulfil"
+    "2026-11-28T03:35:53+00:00 buyer-side deal - our party is the payer, not ours to fulfil",
+    "2026-11-28T05:08:17+00:00 buyer-side deal - our party is the payer, not ours to fulfil"
    ]
   },
   {
@@ -878,13 +878,13 @@
    "pids": [
     106732
    ],
-   "hb_age_s": 25.9,
-   "hb_at": "2026-11-28T05:05:43Z",
+   "hb_age_s": 28.9,
+   "hb_at": "2026-11-28T05:09:43Z",
    "hb_stale": false,
    "log_tail": [
     "--- stderr ---",
     "error: every watched source failed: chat.message: fetch failed | order.funded: fetch failed | offer.received: fetch failed",
-    "WAIT #64 2026-11-28T05:04:53Z STATE_OK"
+    "WAIT #65 2026-11-28T05:06:44Z STATE_OK"
    ]
   }
  ]
